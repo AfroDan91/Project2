@@ -1,0 +1,33 @@
+<html>
+
+    {% block body %}
+
+        <h1>Match Results</h1> <br>
+
+        <h3><b>You</b></h3>
+        Name: {{ pstats[0] }} <br>
+        Attack Score: {{ pstats[1] }} <br>
+        Defence Score: {{ pstats[2] }} <br>
+        <br>
+        <br>
+        <h3>Opponent</h3>
+        Name: {{ estats[0] }} <br>
+        Attack Score: {{ estats[1] }} <br>
+        Defence Score: {{ estats[2] }} <br>
+        <br>
+        <br>
+        <h2>Result:</h2> <br>
+        <h1><b>{{ result }}</b></h1> <br>
+        <br>
+        <br>
+        <h3>Match History</h3>
+        {%for h in history%}
+            <div class="history">
+                {{h.pname}} {{h.ename}} | {{h.outcome}}  <br>
+                <br>
+            </div>
+        {%endfor%}
+   
+    {% endblock body %}
+
+</html>

@@ -5,16 +5,16 @@ app = Flask(__name__)
 
 
 @app.route('post/who_won', methods=['POST'])
-def who_won(p, e):
+def who_won():
     
-    p = request.json[estats]
-    e = request.json[pstats]
+    p = request.json[0]
+    e = request.json[1]
 
 
     if p[1] + p[2] >= e[1] + e[2]:
-        winner = p[0]
+        winner = "Win"
     elif e[1] + e[2] > p[1] + p[2]:
-        winner = e[0]
+        winner = "Loss"
     else:
         winner = "Draw"
 
