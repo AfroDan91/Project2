@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 
-@app.route('post/who_won', methods=['POST'])
+@app.route('/post/who_won', methods=['POST'])
 def who_won():
     
     p = request.json[0]

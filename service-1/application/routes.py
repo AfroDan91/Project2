@@ -1,4 +1,5 @@
-from flask import Flask, Response, request, jsonify
+from flask import Flask, Response, request, jsonify, render_template
+import requests
 from . import app, db
 from .models import Results
 
@@ -18,9 +19,9 @@ def main():
 
 
     # step 4: gets the stats from services 2 and 3 and the result from service 4 and commits it to the database.
-    new_res = Results(pname=pstats[0][0], patt=pstats[0][1], pdef=pstats[0][2], ename=estats[1][0], eatt=estats[1][1], edef=estats[1][2], outcome=result)
+    new_res = Results(pname=stats[0][0], patt=stats[0][1], pdef=stats[0][2], ename=stats[1][0], eatt=stats[1][1], edef=stats[1][2], outcome=result)
     db.session.add(new_res)
-    db.sesson.commit()
+    db.session.commit()
 
     # step5: passes the player stats, enemy stats, match results and 5 match history to the html template for rendering.
     return render_template("main.html", estats=stats[1], pstats=stats[0], result=result, history=history)
