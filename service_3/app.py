@@ -3,9 +3,11 @@ import random
 
 app = Flask(__name__)
 
+names = ["Steve the King", "Evan Almighty", "Thor"]
+
 @app.route('/get/pstats')
 def player_gen():
-    names = ["Steve the King", "Evan Almighty", "Thor"]
+
     player_name = random.choice(names)
     attack = random.randint(1, 10)
     defence = random.randint(1, 10)
