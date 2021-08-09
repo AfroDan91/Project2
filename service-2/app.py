@@ -3,6 +3,8 @@ import random
 
 app = Flask(__name__)
 
+names = ["Jack the ripper","Angry Dave", "Crazy Pat"]
+
 @app.route('/get/estats')
 def enemy_gen():
     names = ["Jack the ripper","Angry Dave", "Crazy Pat"]
