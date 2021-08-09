@@ -2,7 +2,7 @@
 from flask import url_for
 from flask_testing import TestCase
 
-from app import app, names
+from service_3.app import app, names
 
 class TestBase(TestCase):
     def create_app(self):
@@ -15,6 +15,6 @@ class TestResponse(TestBase):
         for _ in range(20):
             response = self.client.get(url_for('enemy_gen'))
 
-            #self.assert200(response)
-            #self.assertIn(response.data.decode(), names)
-            #assert "Jack the ripper" or "Angry Dave" in response.data.decode()
+            text = response.data.decode().split(" ")
+            self.assert200(response)
+            assert any(word in response.data.decode() for word in names)

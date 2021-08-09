@@ -1,7 +1,11 @@
   
 [run]
-include=service_[1234]/app.py
+include=service_[234]/app.py
+omit =
+    service-1/create.py
+    service-1/app.py
 
 [report]
+
 exclude_lines =
   if __name__ == '__main__':

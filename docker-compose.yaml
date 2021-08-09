@@ -12,12 +12,12 @@ services:
   service-2:
     container_name: "service-2"
     image: dwordie/service-2
-    build: service-2/
+    build: service_2/
 
   service-3:
     container_name: "service-3"
     image: dwordie/service-3
-    build: service-3/
+    build: service_3/
 
   service-4:
     container_name: "service-4"
