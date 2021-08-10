@@ -22,4 +22,4 @@ services:
   service-4:
     container_name: "service-4"
     image: dwordie/service-4
-    build: service-4/
+    build: service_4/
