@@ -8,4 +8,4 @@ sudo apt-get install python3 python3-pip python3-venv -y
 # install reqs
 pip3 install -r requirements.txt
 #run tests with cov reports
-#python3 -m pytest --cov=.  
+python3 -m pytest --cov=.  
