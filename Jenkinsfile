@@ -18,31 +18,10 @@ pipeline{
                     sh "pip3 install -r requirements.txt"
                 }
             }
-            // stage('Install Ansible'){
-            //     steps{
-            //         sh "sudo apt install software-properties-common"
-            //         sh "sudo apt-add-repository --yes --update ppa:ansible/ansible"
-            //         sh "sudo apt install ansible"
-            //     }
-            // }
-
             stage('Run ansible'){
                 steps{
                     sh "ansible-playbook -i inventory.yaml playbook.yaml"
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 }
