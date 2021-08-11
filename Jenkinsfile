@@ -9,6 +9,7 @@ pipeline{
                     sh  'bash scripts/unit_test.sh'
                 }
             }
+        }
         stages{
             stage('Build and Push'){
                 steps{
