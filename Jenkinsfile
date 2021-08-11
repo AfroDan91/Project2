@@ -1,7 +1,7 @@
 pipeline{
         agent any
         environment{
-            docker=credentials("docker")
+            docker = credentials("docker")
         }
 
         stages{
@@ -13,7 +13,7 @@ pipeline{
         
             stage('Build and Push'){
                 steps{
-                    sh "docker login - ${docker_USR} -p ${docker_PSW}"
+                    sh "docker login -u ${docker_USR} -p ${docker_PSW}"
                     sh  'bash scripts/build_push.sh'
                 }
             }
