@@ -13,7 +13,6 @@ pipeline{
         
             stage('Build and Push'){
                 steps{
-                    sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}"
                     sh  'bash scripts/build_push.sh'
                 }
             }
