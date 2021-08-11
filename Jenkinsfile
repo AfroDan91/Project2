@@ -1,7 +1,7 @@
 pipeline{
         agent any
         environment{
-            docker = credentials("docker")
+            DOCKERHUB_CREDENTIALS = credentials("DOCKERHUB_CREDENTIALS")
         }
 
         stages{
@@ -13,7 +13,7 @@ pipeline{
         
             stage('Build and Push'){
                 steps{
-                    sh "docker login -u ${docker_USR} -p ${docker_PSW}"
+                    sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}"
                     sh  'bash scripts/build_push.sh'
                 }
             }
