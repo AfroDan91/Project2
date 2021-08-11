@@ -1,0 +1,10 @@
+all:
+  hosts:
+    swarm-manager:
+    nginx-lb2:
+  children:
+    workers:
+      hosts:
+        swarm-worker1:
+  vars: 
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'

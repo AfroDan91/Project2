@@ -1,0 +1,26 @@
+- hosts: nginx-lb2
+  become: true
+  roles:
+    - Configure NGINX
+
+- hosts:
+    - swarm-manager
+    - workers
+  become: true
+  roles:
+    - Install Docker
+
+- hosts: swarm-manager
+  become: true
+  roles:
+    - Initilise swarm
+
+- hosts: workers
+  become: true
+  roles:
+    - Join Swarm
+
+- hosts: swarm-manager
+  become: true
+  roles:
+    - Stack Deploy
