@@ -1,5 +1,5 @@
+version: '3.7'
 services:
-
   service-1:
     container_name: "service-1"
     image: dwordie/service-1
