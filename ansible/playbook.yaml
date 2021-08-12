@@ -19,8 +19,3 @@
   become: true
   roles:
     - Join Swarm
-
-- hosts: swarm-manager
-  become: true
-  roles:
-    - Stack Deploy
