@@ -24,7 +24,11 @@ pipeline{
                 }
             }
 
-
+            stage('Deploy Application'){
+                steps{
+                    sh  'bash scripts/deploy.sh'
+                }
+            }
 
 
 
