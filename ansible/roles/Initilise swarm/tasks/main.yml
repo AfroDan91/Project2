@@ -5,7 +5,3 @@
   docker_swarm:
     state: present
   register: swarm_info
-
-- name: Debug swarm
-  debug:
-    msg: "{{ swarm_info }}"
