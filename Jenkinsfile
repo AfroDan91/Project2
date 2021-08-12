@@ -17,7 +17,11 @@ pipeline{
                 }
             }
 
-
+            stage('Build and Push'){
+                steps{
+                    sh  'bash scripts/ansible_config.sh'
+                }
+            }
 
 
 
