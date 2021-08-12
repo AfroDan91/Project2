@@ -1,4 +1,4 @@
-
+ls
 sudo scp ${WORKSPACE}/docker-compose.yaml jenkins@swarm-manager:/home/danie
 
 ssh swarm-manager << EOF
