@@ -4,6 +4,8 @@ services:
     container_name: "service-1"
     image: dwordie/service-1
     build: service-1
+    ENVIRONMENT:
+      DATABASE_URI:
     ports:
     - target: 5000
       published: 5000
