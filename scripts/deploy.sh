@@ -1,5 +1,5 @@
-ls
-sudo scp /home/jenkins/Project2/docker-compose.yaml jenkins@swarm-manager:/home/jenkins
+
+rsync docker-compose.yaml swarm-manager:
 
 ssh swarm-manager << EOF
 export DATABSE_URI=$DATABASE_URI
