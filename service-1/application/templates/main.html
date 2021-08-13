@@ -15,12 +15,11 @@
         <br>
         <h2>Result:</h2>
         <h1><b>----->{{ result }}<-----</b></h1> <br>
-        <br>
         -------------------------------------------------------------------
         <h3>Match History</h3>
         {%for h in history%}
             <div class="history">
-                {{h.pname}} {{h.ename}} | {{h.outcome}}  <br>
+                {{h.pname}} <b>VS</b> {{h.ename}} | {{h.outcome}}  <br>
                 <br>
             </div>
         {%endfor%}
