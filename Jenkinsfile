@@ -5,7 +5,7 @@ pipeline{
             DATABASE_URI = credentials("DATABASE_URI")
         }
 
-        // stages{
+        stages{
         //     stage('Run Tests'){
         //         steps{
         //             sh  'bash scripts/unit_test.sh'
