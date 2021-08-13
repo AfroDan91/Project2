@@ -1,16 +1,14 @@
 from flask import Flask, jsonify, request
 import random
-import requests
 
 app = Flask(__name__)
 
 names = ["Steve the King", "Evan Almighty", "Thor"]
-response3 = requests.get("https://api.parser.name/?api_key=25d97a94cfff505ad3b2a732cf9b2496&endpoint=generate").json()
 
 @app.route('/get/pstats')
 def player_gen():
 
-    player_name = response3['data'][0]['name']['firstname']['name']
+    player_name = random.choice(names)
     attack = random.randint(1, 10)
     defence = random.randint(1, 10)
     pstats = [player_name, attack, defence]

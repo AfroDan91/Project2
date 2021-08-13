@@ -6,11 +6,11 @@ pipeline{
         }
 
         stages{
-        //     stage('Run Tests'){
-        //         steps{
-        //             sh  'bash scripts/unit_test.sh'
-        //         }
-        //     }
+            stage('Run Tests'){
+                steps{
+                    sh  'bash scripts/unit_test.sh'
+                }
+            }
         
             stage('Build and Push'){
                 steps{
