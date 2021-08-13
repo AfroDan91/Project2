@@ -59,14 +59,14 @@ After landing on an idea suitable to pursue, I took to Jira to whip up a timetab
 At the beginning of my project the Kanban board looked like this;
 <br/>
 <br/>
-![Jira1]()
+![Jira1](https://i.imgur.com/8BZZvJX.png)
 <br/>
 <br/>
 But as the project matured I added more tasks and user stories as potential new functionality came to me. 
 In the end the board was more filled out and had many more tasks included in. There was also an out of scope list for a future sprint should I have the opportunity to do one. 
 <br/>
 <br/>
-![Jira2]()
+![Jira2](https://i.imgur.com/RTUpjQy.png)
 <br/>
 <br/>
 
@@ -77,33 +77,34 @@ This stage is very important as in making these I can weed out some of the poten
 I drafted my ED board in Lucid first as that seemed the easiest to map out quickly.  
 <br/>
 <br/>
-![ED1]()
+![ED1](https://i.imgur.com/J62nYcq.png)
 <br/>
 <br/>
 After that it was back to Lucid again to map out CI/CD pipeline to follow.
 <br/>
 <br/>
-![CICD1]()
+![CICD1](https://i.imgur.com/LSh4NJa.png)
 <br/>
 <br/>
 Second last on the list is to map out my services. This allows at a glance comprehension of the basic service flow occurring between user and backend. 
 <br/>
 <br/>
-![services]()
+![services](https://i.imgur.com/plKwUlQ.png)
 <br/>
 <br/>
-The last things to map were my infrastructure diagram and my interactions diagram.<br/>
-I had never made these before however as they were a visual representation of what was going on in my app it was easy to picture it and using Lucid again, document it. <br/>
+The last thing to map was my interactions diagram.<br/>
+I had never made this before however as it was a visual representation of what was going on in my app it was easy to picture it and using Lucid again, document it. <br/>
 <br/>
-Infrastructure Diagram<br/>
-![infd1]()
+Infrastructure Diagram;<br/>
 <br/>
-<br/>
-Interactions Diagram<br/>
-![intd1]()
-<br/>
-<br/>
+![infd1](https://i.imgur.com/DgFCCQ9.png)
 
+I had originally planned on having my sql instance contained in a container also however this would have lead to unnessasary work and yeilding no great benifits so I instead opted for this disign in the end
+<br/>
+<br/>
+![infd2](https://i.imgur.com/aa2IsA3.png)
+<br/>
+<br/>
 Building these really reinforced my understanding of my project and the innerworkings of it, making the physical coding of the app and it's infrastructure quick and easier. 
 <br/>
 <br/>
@@ -113,7 +114,7 @@ No good planning stage would be complete without a risk assessment Fortunately t
 Below is the updated risk assessment;
 <br/>
 <br/>
-![riskass]()
+![riskass](https://i.imgur.com/swbbuQH.png)
 <br/>
 <br/>
 Risk assessments are extremely important in the prediction, evasion and mitigation of issues that can and will come up. Unfortunately it is impossible to avoid all issues so getting the upper hand on them can significantly reduce the impact they have on a project or development process, <br/>
@@ -131,7 +132,8 @@ With the planning stages all completed, the application followed quickly behind 
 The application its self looks like this;
 <br/>
 <br/>
-![apptour]()
+
+![tour](https://i.imgur.com/o8smX5g.png)
 <br/>
 <br/>
 
@@ -154,7 +156,8 @@ For this service 1 sends a request to the database for all results limited to th
 <details>
   <summary>An un annotated image can been viewed here</summary>
   
-![apptour2]()
+
+![apptour2](https://i.imgur.com/AVaOY1j.png)
 
 </details>
 
@@ -178,7 +181,7 @@ RED = failed builds
 Grey = canceled builds
 BLUE = successful builds.
 
-![jb1]()
+![jb1](https://i.imgur.com/xJUs2iz.png)
 
 As you can see there were A LOT of failed builds, however as it reaches then end the builds are more frequently successful as things started coming together. 
 
