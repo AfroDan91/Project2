@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-names = ["Steve the King", "Evan Almighty", "Thor"]
+names = ["IRON MAN", "GOOD GUY MCGOO", "JESUS"]
 
 @app.route('/get/pstats')
 def player_gen():
