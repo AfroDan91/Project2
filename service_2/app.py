@@ -3,14 +3,14 @@ import random
 
 app = Flask(__name__)
 
-names = ["HATCHET HARRY","SLENDERMAN", "DONALD TRUMP"]
+names = ["Jack the ripper","Angry Dave", "Crazy Pat"]
 
 @app.route('/get/estats')
 def enemy_gen():
     names = ["HATCHET HARRY","SLENDERMAN", "DONALD TRUMP"]
     enemy_name = random.choice(names)
-    attack = random.randint(1, 100)
-    defence = random.randint(1, 100)
+    attack = random.randint(1, 10)
+    defence = random.randint(1, 10)
     estats = [enemy_name, attack, defence]
 
     return jsonify(estats)
