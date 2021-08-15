@@ -3,14 +3,14 @@ import random
 
 app = Flask(__name__)
 
-names = ["Steve the King", "Evan Almighty", "Thor"]
+names = ["IRON MAN", "GOOD GUY MCGOO", "JESUS"]
 
 @app.route('/get/pstats')
 def player_gen():
 
     player_name = random.choice(names)
-    attack = random.randint(1, 10)
-    defence = random.randint(1, 10)
+    attack = random.randint(1, 100)
+    defence = random.randint(1, 100)
     pstats = [player_name, attack, defence]
 
     return jsonify(pstats)
