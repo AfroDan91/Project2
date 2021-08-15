@@ -7,7 +7,7 @@ names = ["Jack the ripper","Angry Dave", "Crazy Pat"]
 
 @app.route('/get/estats')
 def enemy_gen():
-    names = ["HATCHET HARRY","SLENDERMAN", "DONALD TRUMP"]
+    names = ["Jack the ripper","Angry Dave", "Crazy Pat"]
     enemy_name = random.choice(names)
     attack = random.randint(1, 10)
     defence = random.randint(1, 10)
